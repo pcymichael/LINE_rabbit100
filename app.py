@@ -49,6 +49,7 @@ def callback():
 def handle_message(event):
     li_Dcard=Hot()
     # str_Dcard="\n".join(li_Dcard)
+    li=""
     for i in li_Dcard:
         li=li+i+"\n"
     line_bot_api.reply_message(

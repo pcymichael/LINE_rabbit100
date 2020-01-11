@@ -51,7 +51,7 @@ def handle_message(event):
     # str_Dcard="\n".join(li_Dcard)
     li=""
     for i in li_Dcard:
-        li=li+i+"\n"
+        li=li+i+"\n\n"
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=li))

@@ -48,13 +48,13 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     li_Dcard=Hot()
-    # str_Dcard="\n".join(li_Dcard)
-    li=""
-    for i in li_Dcard:
-        li=li+i+"\n\n"
+    str_Dcard="\n\n".join(li_Dcard)
+    # li=""
+    # for i in li_Dcard:
+    #     li=li+i+"\n\n"
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=li))
+        TextSendMessage(text=str_Dcard))
     
 
 if __name__ == "__main__":

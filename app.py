@@ -48,12 +48,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     li_Dcard=Hot()
-    # str_Dcard=""
-    # str_Dcard="\n".join(li_Dcard)
-    for i in li_Dcard:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=i))
+    str_Dcard="\n".join(li_Dcard)
+    st="https://www.dcard.tw/f/entertainer/p/232862065-當李秀滿在聊天群向RedVelvet詢問對服裝的看法時！\nhttps://www.dcard.tw/f/trending/p/232859612-我知道已經很多篇了-但我還是要說麻煩大家1／11回家投票��\nhttps://www.dcard.tw/f/relationship/p/232861828-男生很少會主動提分手"
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=st))
 
 if __name__ == "__main__":
     app.run()

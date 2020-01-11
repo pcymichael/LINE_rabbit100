@@ -50,9 +50,10 @@ def handle_message(event):
     li_Dcard=Hot()
     # str_Dcard=""
     # str_Dcard="\n".join(li_Dcard)
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=li_Dcard[0]))
+    for i in li_Dcard:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=i))
 
 if __name__ == "__main__":
     app.run()

@@ -51,7 +51,7 @@ def handle_message(event):
     str_Dcard="\n".join(li_Dcard)
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text="123\n456"))
+        TextSendMessage(text=str(str_Dcard)))
 
 if __name__ == "__main__":
     app.run()

@@ -53,10 +53,8 @@ def handle_message(event):
     st1="https://www.dcard.tw/f/relationship/p/232861828-男生很少會主動提分手"
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=st))
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=st1))
+        TextSendMessage(text=st+st1))
+    
 
 if __name__ == "__main__":
     app.run()

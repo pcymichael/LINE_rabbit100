@@ -1,7 +1,6 @@
 line-bot-sdk==1.8.0
 flask==1.0.2
-beautifulsoup4==4.8.1
-bs4==0.0.1
-selenium==3.141.0
+beautifulsoup4==4.9.1
+requests==2.23.0
+imgurpython==1.1.7
 gunicorn
-
